@@ -149,6 +149,7 @@ async function uploadFilesToDrive(formData, pdfBlob) {
             const base64 = reader.result.split(',')[1];
             files.push({
                 fileName: 'Ficha de Cadastro.pdf',
+                field: 'pdf',
                 mimeType: 'application/pdf',
                 base64: base64
             });
@@ -167,6 +168,7 @@ async function uploadFilesToDrive(formData, pdfBlob) {
                     const base64 = reader.result.split(',')[1];
                     files.push({
                         fileName: value.name,
+                        field: key,
                         mimeType: value.type,
                         base64: base64
                     });
@@ -183,6 +185,10 @@ async function uploadFilesToDrive(formData, pdfBlob) {
     const payload = {
         clientName: clientName,
         contractType: contractType,
+        // Inclui nome do colaborador para uso na renomeação dos arquivos no Apps Script
+        collaboratorName: (document.getElementById('collaborator') && document.getElementById('collaborator').selectedOptions && document.getElementById('collaborator').selectedOptions[0]) 
+            ? document.getElementById('collaborator').selectedOptions[0].text 
+            : '',
         files: files
     };
     // Chama função central de upload
