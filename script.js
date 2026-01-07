@@ -122,7 +122,7 @@ const offers = {
 // Função para upload de arquivos no Google Drive via Apps Script
 // =============================
 // Cole a URL do seu Apps Script Web App abaixo:
-const APPS_SCRIPT_UPLOAD_URL = 'https://script.google.com/macros/s/AKfycbzsBsCPhbq7OLlaEAt8PG6rxIuHSoNlXTtjlwmhAK7rYJP9Ylit9fbMbGgYnd4kDUk/exec';
+const APPS_SCRIPT_UPLOAD_URL = 'https://script.google.com/macros/s/AKfycbyVe3uighEDIGJ7f5FScb1b8RCzhfk8rI-IrS_-2c1fkkeWfSxK0h7bVLafhoPo7NyS/exec';
 
 /**
  * Envia todos os arquivos do formulário para o Google Drive via Apps Script, incluindo o PDF da ficha
@@ -1052,7 +1052,7 @@ function limitCepInput(e) {
 // ============================================
 
 // Cole aqui a URL do Google Apps Script após seguir as instruções em INSTRUCOES_GOOGLE_SHEETS.md
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxdfaJ0r9mk5QCrRdAWrw7uNBxunVRCsgRteuWhov4Ng9guC02OH7QwTdJ8b2-pFzOiaA/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkUpHD1WScNymcvAdStXxClQGbpWwCE9QOzTnU0DTSvuMowKVNrLu9BWYq-Kk3l7nR/exec';
 
 async function sendToGoogleSheets(formData) {
     // Se a URL não foi configurada, não tenta enviar
